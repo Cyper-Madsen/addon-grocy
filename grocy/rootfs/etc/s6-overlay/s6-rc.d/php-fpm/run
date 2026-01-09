@@ -82,6 +82,11 @@ if bashio::config.false 'tweaks.stock_product_opened_tracking'; then
     export GROCY_FEATURE_FLAG_STOCK_PRODUCT_OPENED_TRACKING=0
 fi
 
+if bashio::config.has_value 'tweaks.reverse_proxy_auth_header'; then
+    export GROCY_AUTH_CLASS="Grocy\Middleware\ReverseProxyAuthMiddleware"
+    export GROCY_REVERSE_PROXY_AUTH_HEADER=$(bashio::config 'tweaks.reverse_proxy_auth_header')
+fi
+
 if bashio::config.false 'tweaks.stock_count_opened_products_against_minimum_stock_amount'; then
     export GROCY_FEATURE_SETTING_STOCK_COUNT_OPENED_PRODUCTS_AGAINST_MINIMUM_STOCK_AMOUNT=0
 fi
