@@ -57,6 +57,7 @@ tweaks:
   stock_product_freezing: true
   stock_product_opened_tracking: true
   stock_count_opened_products_against_minimum_stock_amount: true
+  reverse_proxy_auth_header: "Cf-Access-Authenticated-User-Email"
 log_level: info
 ssl: false
 certfile: fullchain.pem
@@ -195,6 +196,9 @@ equal Sunday:
 
 - `calendar_first_day_of_week`
 - `meal_plan_first_day_of_week`
+
+To setup an auth header to sign in with an auth proxy, an example is using cloudflare tunnels where it should be "Cf-Access-Authenticated-User-Email"
+- `reverse_proxy_auth_header`
 
 ### Option: `grocy_ingress_user`
 
