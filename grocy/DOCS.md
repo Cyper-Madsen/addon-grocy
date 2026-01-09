@@ -197,7 +197,8 @@ equal Sunday:
 - `calendar_first_day_of_week`
 - `meal_plan_first_day_of_week`
 
-To setup an auth header to sign in with an auth proxy, an example is using cloudflare tunnels where it should be "Cf-Access-Authenticated-User-Email"
+The following sub feature can be set to specify an auth header to sign in with an auth proxy, an example is using Cloudflare Tunnels where it should be "Cf-Access-Authenticated-User-Email"
+
 - `reverse_proxy_auth_header`
 
 ### Option: `grocy_ingress_user`
